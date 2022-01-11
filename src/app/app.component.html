@@ -1,5 +1,7 @@
 <table>
   <tr>
+    <td routerLink="public">Public page</td>
+    <td routerLink="restricted-page" *ngIf="isLoggedIn()">Redirect page</td>
     <button (click)="login()" *ngIf="!isLoggedIn()">SIGN IN</button>
     <button (click)="logout()" *ngIf="isLoggedIn()">SIGN OUT</button>
   </tr>

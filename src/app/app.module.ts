@@ -5,19 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MsalModule, MsalService, MSAL_INSTANCE } from '@azure/msal-angular';
 import { IPublicClientApplication, PublicClientApplication } from '@azure/msal-browser';
+import { PublicComponent } from './public/public.component';
+import { RestrictedPageComponent } from './restricted-page/restricted-page.component';
 
 export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
     auth: {
       clientId: '8386efec-d021-4f0a-9c85-ea11809d4046',
-      redirectUri: 'https://youthful-swirles-ac685e.netlify.app/'
+      redirectUri: 'http://localhost:4200'
     }
   })
 }
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PublicComponent,
+    RestrictedPageComponent
   ],
   imports: [
     BrowserModule,
