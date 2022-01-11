@@ -10,7 +10,7 @@ export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
     auth: {
       clientId: '8386efec-d021-4f0a-9c85-ea11809d4046',
-      redirectUri: 'http://localhost:4200'
+      redirectUri: 'https://youthful-swirles-ac685e.netlify.app/'
     }
   })
 }
